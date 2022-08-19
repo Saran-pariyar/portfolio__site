@@ -1,0 +1,106 @@
+.navbar {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 999999;
+}
+
+.nav-ul {
+    /* background: #884b71; */
+    background-color: #791985;
+    border: 2px solid black;
+    border-left: 2px solid white;
+    border-bottom: 2px solid yellow;
+
+    position: fixed;
+    right: -100%;
+    top: 0rem;
+    transition: 0.4s all;
+    width: 10rem;
+    border-radius: 0px 0px 0px 50px;
+    padding: 3rem 0 0.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-ul .nav-links {
+    position: relative;
+    list-style: none;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    color: #212529;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.nav-ul .nav-links::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.nav-ul .nav-links:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.ham-icon {
+    width: 2rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+/* ham-icon section  */
+.ham-icon .line {
+    height: 5px;
+    width: 100%;
+    background: rgb(188, 190, 207);
+    border-radius: 8px;
+    transition: 0.4s all;
+    z-index: 99;
+    transition: .5s all;
+}
+
+
+/* for making ham-icon change into cross-icon  */
+
+.cross-icon .line-1,
+.cross-icon .line-2 {
+    transform: rotate(50deg);
+    top: 1.04rem;
+}
+
+.cross-icon .line-3 {
+    transform: rotate(125deg);
+}
+
+.cross-icon .line-1,
+.cross-icon .line-2,
+.cross-icon .line-3 {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+}
+
+
+/* for showing the menu items and chaning from right:-100% to right:0 */
+.showMenu {
+    right: 0;
+}
